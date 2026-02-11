@@ -1,6 +1,4 @@
-import type { Site, SocialObjects } from "./types";
-
-export const SITE: Site = {
+export const SITE = {
   website: "https://ajthiesen.com/", 
   author: "Andrew Thiesen",
   profile: "https://ajthiesen.com/",
@@ -30,7 +28,14 @@ export const LOCALE = {
   langTag: ["en-EN"], 
 } as const;
 
-export const SOCIALS: SocialObjects = [
+export const LOGO_IMAGE = {
+  enable: false,
+  svg: true,
+  width: 216,
+  height: 46,
+};
+
+export const SOCIALS = [
   {
     name: "Github",
     href: "https://github.com/ajthiesen",
