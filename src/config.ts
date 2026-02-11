@@ -1,23 +1,45 @@
-export const SITE = {
-  website: "https://ajthiesen.com/", // replace this with your deployed domain
+import type { Site, SocialObjects } from "./types";
+
+export const SITE: Site = {
+  website: "https://ajthiesen.com/", // Your actual domain
   author: "Andrew Thiesen",
-  profile: "https://ajthiesen.com/",
-  desc: "Systems Architect & Machine Learning Engineer",
+  desc: "Systems Architect, Machine Learning Engineer, and Cybersecurity Advocate.",
   title: "AJ Thiesen",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 4,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
-  showBackButton: true, // show back button in post detail
-  editPost: {
-    enabled: true,
-    text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
-  },
-  dynamicOgImage: true,
-  dir: "ltr", // "rtl" | "auto"
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  timezone: "Asia/Bangkok", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  postPerPage: 5,
+  scheduledPostMargin: 15 * 60 * 1000, 
+};
+
+export const LOCALE = {
+  lang: "en", // html lang code
+  langTag: ["en-EN"], // BCP 47 Language Tags
 } as const;
+
+export const LOGO_IMAGE = {
+  enable: false,
+  svg: true,
+  width: 216,
+  height: 46,
+};
+
+export const SOCIALS: SocialObjects = [
+  {
+    name: "Github",
+    href: "https://github.com/ajthiesen",
+    linkTitle: ` ${SITE.title} on Github`,
+    active: true,
+  },
+  {
+    name: "Mail",
+    href: "mailto:aj@ajthiesen.com",
+    linkTitle: `Send an email to ${SITE.title}`,
+    active: true,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/ajthiesen", // Update with your actual LinkedIn if you have one
+    linkTitle: `${SITE.title} on LinkedIn`,
+    active: true,
+  }
+];

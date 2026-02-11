@@ -1,37 +1,29 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "About Me"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+I am Andrew "AJ" Thiesen, a Systems Architect, Machine Learning Engineer, and Cybersecurity Advocate based in Naples, FL.
 
-![Astro Paper](public/astropaper-og.jpg)
+With a Bachelor of Science in Information Technology and a concentration in Cybersecurity, I specialize in building, securing, and automating enterprise-grade infrastructure. I currently work as an IT Analyst in Server & Storage, where I manage critical systems and ensure seamless operational continuity.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+## Core Expertise
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+My work sits at the intersection of hardware, security, and code. I build tools that eliminate manual overhead and enforce zero-trust policies.
 
-## Features
+- **Infrastructure Automation:** Development of comprehensive PowerShell frameworks to automate server lifecycles, including zero-trust decommissioning processes.
+- **Enterprise Auditing:** Building modular, scalable auditing tools to visualize server dependencies and enforce strict security baselines across complex environments.
+- **Machine Learning & Edge Compute:** Bridging the gap between physical server infrastructure and the pipelines required to run modern machine learning models efficiently.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+## Projects & Initiatives
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+Beyond my day-to-day architectural work, I am the founder of **Black Anchor Works**, a digital identity focused on delivering secure, minimalist web solutions and exploring the future of decentralized edge computing. 
 
-and so much more.
+I am continuously refining my own operational security and lab environments, developing custom solutions to map out and secure hybrid networks.
 
-## Show your support
+## Get in Touch
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+I am always open to discussing new remote architecture roles, infrastructure challenges, or security advocacy. 
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+- **Email:** [aj@ajthiesen.com](mailto:aj@ajthiesen.com)
+- **GitHub:** [@ajthiesen](https://github.com/ajthiesen)
