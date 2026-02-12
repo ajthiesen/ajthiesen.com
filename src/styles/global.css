@@ -1,70 +1,60 @@
-@import "tailwindcss";
-@import "./typography.css";
-
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
-:root,
-html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+/* Professional Systems Architect Theme */
+:root {
+  /* Light Mode: Clean, Corporate, Trustworthy */
+  --color-fill: 248, 250, 252;       /* Slate-50: Very subtle cool gray background */
+  --color-text-base: 15, 23, 42;     /* Slate-900: Deepest navy/black for text */
+  --color-accent: 14, 165, 233;      /* Sky-500: Professional bright blue accent */
+  --color-card: 255, 255, 255;       /* Pure white cards */
+  --color-card-muted: 241, 245, 249; /* Slate-100: Subtle distinction for secondary cards */
+  --color-border: 226, 232, 240;     /* Slate-200: Crisp borders */
 }
 
-html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+[data-theme="dark"] {
+  /* Dark Mode: "Black Anchor" / Cyber Aesthetics */
+  --color-fill: 2, 6, 23;            /* Slate-950: Almost black, hint of navy */
+  --color-text-base: 226, 232, 240;  /* Slate-200: High readability off-white */
+  --color-accent: 14, 165, 233;      /* Sky-500: Electric blue pop (Cybersecurity feel) */
+  --color-card: 15, 23, 42;          /* Slate-900: Dark element background */
+  --color-card-muted: 30, 41, 59;    /* Slate-800: Lighter dark for secondary elements */
+  --color-border: 51, 65, 85;        /* Slate-700: Subtle dark borders */
 }
 
-@theme inline {
-  --font-app: var(--font-google-sans-code);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
+/* Base Styles */
+#sun-svg,
+html[data-theme="dark"] #moon-svg {
+  display: none;
 }
-
-@layer base {
-  * {
-    @apply border-border outline-accent/75;
-    scrollbar-width: auto;
-    scrollbar-color: var(--color-muted) transparent;
-  }
-  html {
-    @apply overflow-y-scroll scroll-smooth;
-  }
-  body {
-    @apply flex min-h-svh flex-col bg-background font-app text-foreground selection:bg-accent/75 selection:text-background;
-  }
-  a,
-  button {
-    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
-  }
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
+#moon-svg,
+html[data-theme="dark"] #sun-svg {
+  display: block;
 }
-
-@utility max-w-app {
-  @apply max-w-3xl;
+body {
+  @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base selection:bg-skin-accent selection:text-skin-inverted;
 }
-
-@utility app-layout {
-  @apply mx-auto w-full max-w-app px-4;
+section,
+footer {
+  @apply mx-auto max-w-3xl px-4;
 }
-
-.active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-8;
+a {
+  @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
 }
-
-/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 1rem;
+svg {
+  @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
+}
+svg.icon-tabler {
+  @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110;
+}
+.prose {
+  @apply prose-headings:!mb-3 prose-headings:!text-skin-base prose-h3:italic prose-p:!text-skin-base prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent prose-figcaption:!text-skin-base prose-strong:!text-skin-base prose-code:rounded prose-code:bg-skin-card/75 prose-code:p-1 prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-skin-base prose-ul:!text-skin-base prose-li:marker:!text-skin-accent prose-table:text-skin-base prose-th:border prose-th:border-skin-line prose-td:border prose-td:border-skin-line prose-img:!my-2 prose-img:mx-auto prose-img:border-2 prose-img:border-skin-line prose-hr:!border-skin-line;
+}
+.prose a {
+  @apply hover:!text-skin-accent;
+}
+.prose thead th:first-child,
+tbody td:first-child,
+tfoot td:first-child {
+  padding-left: 0.5714286em;
+}
+.prose h2#table-of-contents {
+  @apply mb-2;
 }
